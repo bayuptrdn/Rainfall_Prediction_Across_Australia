@@ -1,0 +1,3 @@
+URL Model Deployment via Streamlit : https://deploymentmilestone2bayuputradanahacktiv8.streamlit.app
+
+URL Dataset : https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package

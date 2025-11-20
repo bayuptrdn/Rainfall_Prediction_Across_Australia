@@ -1,0 +1,51 @@
+Conceptual Problems
+
+1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+
+Bagging (Bootstrap Aggregating) muncul sebagai solusi untuk mengurangi variansi model yang cenderung overfitting pada data pelatihan. Ide dasarnya adalah menggabungkan beberapa model yang dilatih dari sampel data berbeda (hasil bootstrap sampling) untuk menghasilkan prediksi yang lebih stabil dan akurat.
+
+Cara kerja bagging:
+- Dataset asli diambil beberapa kali secara acak dengan pengembalian (bootstrap sampling) untuk menghasilkan banyak subset data.
+- Setiap subset dilatih menggunakan model yang sama (misalnya Decision Tree).
+- Hasil prediksi dari setiap model digabungkan dengan metode voting (untuk klasifikasi) atau rata-rata (untuk regresi).
+- Karena setiap model dilatih pada data berbeda, variasi antar model dapat saling menutupi kesalahan satu sama lain, menghasilkan model akhir yang lebih general dan robust.
+
+Contoh implementasi terkenal dari bagging adalah **Random Forest**, yang membangun banyak pohon keputusan (Decision Tree) dan menggabungkan hasilnya.
+
+---
+
+2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih (bandingkan dengan XGBoost) !
+
+**Random Forest (RF)** dan **XGBoost (Extreme Gradient Boosting)** sama-sama berbasis pohon keputusan (Decision Tree), tetapi memiliki pendekatan berbeda dalam membangun model ensemble.
+
+**Perbedaan utama:**
+- **Random Forest (Bagging):**
+  - Membangun banyak pohon *secara paralel* menggunakan subset data acak.
+  - Setiap pohon berdiri independen dan hasil akhirnya diperoleh dari voting atau rata-rata semua pohon.
+  - Tujuannya adalah mengurangi variansi model.
+
+- **XGBoost (Boosting):**
+  - Membangun pohon *secara berurutan*, di mana setiap pohon baru berfokus memperbaiki kesalahan yang dibuat oleh pohon sebelumnya.
+  - Menggunakan konsep *gradient descent* untuk meminimalkan fungsi loss.
+  - Menambahkan regularisasi (L1 dan L2) agar model tidak overfitting.
+  - Memiliki kontrol yang lebih baik terhadap bias dan variansi dibanding Random Forest.
+
+**Kelemahan Random Forest dibanding XGBoost:**
+- Kurang efisien dalam menangani data dengan pola kompleks dan non-linear ekstrem.
+- Tidak menggunakan pembobotan kesalahan dari model sebelumnya, sehingga tidak adaptif terhadap data yang sulit diklasifikasikan.
+- Performa prediksi biasanya sedikit lebih rendah dibanding XGBoost, terutama pada dataset besar dengan korelasi fitur yang kuat.
+- Waktu pelatihan lebih cepat, tetapi hasil prediksi cenderung kurang optimal dibanding boosting.
+
+---
+
+3. Jelaskan apa yang dimaksud dengan Cross Validation !
+
+**Cross Validation (CV)** adalah metode evaluasi model yang digunakan untuk mengukur kemampuan generalisasi model terhadap data baru. CV membantu menghindari overfitting dengan membagi dataset menjadi beberapa bagian (fold), di mana sebagian digunakan untuk pelatihan dan sisanya untuk validasi — dilakukan bergantian hingga seluruh data digunakan.
+
+**Hubungan dengan proyek:**
+Dalam proyek prediksi hujan ini, teknik **K-Fold Cross Validation (CV)** digunakan pada tahap evaluasi model untuk menilai stabilitas performa beberapa algoritma seperti Decision Tree, Random Forest, KNN, SVM, dan XGBoost.  
+Dengan membagi data pelatihan menjadi beberapa *fold* (3-fold agar proses lebih efisien), setiap model diuji di berbagai kombinasi data pelatihan dan validasi.
+
+Hasil Cross Validation menunjukkan bahwa model **XGBoost** memiliki performa paling konsisten dan stabil dibanding model lainnya.  
+Hal ini membuktikan bahwa model tersebut memiliki kemampuan generalisasi yang baik dan tidak overfit terhadap data latih.
+

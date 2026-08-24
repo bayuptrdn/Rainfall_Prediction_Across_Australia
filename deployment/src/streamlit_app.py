@@ -1,6 +1,6 @@
 import streamlit as st
-import deployment.src.eda as eda
-import deployment.src.prediction as prediction
+import eda
+import prediction
 
 # ===== Sidebar Navigation =====
 with st.sidebar:

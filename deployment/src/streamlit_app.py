@@ -1,3 +1,12 @@
+import sys
+import sklearn.compose._column_transformer
+
+# ===== Patch Compatibility Model Scikit-Learn =====
+if not hasattr(sklearn.compose._column_transformer, '_RemainderColsList'):
+    class _RemainderColsList(list):
+        pass
+    sklearn.compose._column_transformer._RemainderColsList = _RemainderColsList
+
 import streamlit as st
 import eda
 import prediction

@@ -151,7 +151,7 @@ The trained model is deployed as an interactive **web application using Streamli
 
 ### Deployment
 
-[Open the Rain Prediction Application](https://rainfallpredictionacrossaustraliabfappyq5zipidhu5r5fuofs.streamlit.app/)
+[Open the Rain Prediction Application](https://rainfallpredictionacrossaustralia-ab3apdumhqvuwcxxuwappkh.streamlit.app)
 
 The application provides users with the ability to:
 
@@ -377,7 +377,7 @@ Model yang telah dilatih diimplementasikan sebagai **web application menggunakan
 
 ### Deployment
 
-[Open the Rain Prediction Application](https://rainfallpredictionacrossaustraliabfappyq5zipidhu5r5fuofs.streamlit.app/)
+[Open the Rain Prediction Application](https://rainfallpredictionacrossaustralia-ab3apdumhqvuwcxxuwappkh.streamlit.app)
 
 Aplikasi memungkinkan pengguna untuk:
 

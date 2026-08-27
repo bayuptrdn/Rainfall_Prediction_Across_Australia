@@ -61,7 +61,7 @@ The project produces several outputs, including:
 
 The trained model is also available through an interactive web application:
 
-**[Rain Prediction in Australia – Streamlit Application](https://rainfallpredictionacrossaustraliabfappyq5zipidhu5r5fuofs.streamlit.app/)**
+**[Rain Prediction in Australia – Streamlit Application](https://rainfallpredictionacrossaustralia-ab3apdumhqvuwcxxuwappkh.streamlit.app)**
 
 The application provides functionality for:
 
@@ -149,7 +149,7 @@ Proyek ini menghasilkan beberapa output, antara lain:
 
 Model yang telah dilatih juga tersedia melalui aplikasi web interaktif:
 
-**[Rain Prediction in Australia – Streamlit Application](https://rainfallpredictionacrossaustraliabfappyq5zipidhu5r5fuofs.streamlit.app/)**
+**[Rain Prediction in Australia – Streamlit Application](https://rainfallpredictionacrossaustralia-ab3apdumhqvuwcxxuwappkh.streamlit.app)**
 
 Aplikasi ini menyediakan beberapa fungsi, antara lain:
 
